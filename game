@@ -39,7 +39,7 @@
 <body>
     <h1>🎁 Welcome to the Blind Box Game! 🎁</h1>
     <p>Click the box to open your surprise!</p>
-    
+
     <div class="box" onclick="openBox()">Click Me!</div>
 
     <script>
@@ -47,6 +47,19 @@
             alert("✨ Congratulations! You got an exclusive video! ✨");
             window.open("prize.mp4", "_blank");
         }
+
+        // Check if image is loading properly
+        window.onload = function() {
+            const img = new Image();
+            img.src = "Button.jpg";
+            img.onload = function() {
+                console.log("✅ Button.jpg loaded successfully.");
+            };
+            img.onerror = function() {
+                console.log("❌ Error: Button.jpg not found. Check filename and location.");
+                alert("Error: Button image not found! Make sure 'Button.jpg' is uploaded correctly.");
+            };
+        };
     </script>
 </body>
 </html>
