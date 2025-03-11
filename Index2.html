@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Box Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gorton&display=swap');
+        
+        body {
+            font-family: 'Gorton', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 50px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background: url('assets/Button.jpg') no-repeat center center;
+            background-size: cover;
+            background-color: #ccc; /* Fallback color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            color: white;
+            font-weight: bold;
+        }
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>🎁 Welcome to the Blind Box Game! 🎁</h1>
+    <p>Click the box to open your surprise!</p>
+    <div class="box" onclick="openBox()"></div>
+    <audio id="hooraySound" src="assets/hooray.mp3"></audio>
+
+    <script>
+        function openBox() {
+            alert("✨ Congratulations! You got an exclusive video! ✨");
+            document.getElementById("hooraySound").play();
+            window.location.href = "https://drive.google.com/uc?export=download&id=1gTmwnWiRYZ1_W-xldZhzVb4SdOOPNXFd";
+        }
+    </script>
+</body>
+</html>
