@@ -17,7 +17,7 @@
         .box {
             width: 200px;
             height: 200px;
-            background: url('./Button.jpg') no-repeat center center;
+            background: url('Button.jpg') no-repeat center center;
             background-size: cover;
             background-color: #ccc; /* Fallback color */
             display: flex;
@@ -43,7 +43,7 @@
     <div class="box" onclick="openBox()">Click Me!</div>
     
     <audio id="hooraySound">
-        <source src="./hooray.mp3" type="audio/mpeg">
+        <source src="hooray.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -58,7 +58,7 @@
                 console.log("Autoplay blocked. User interaction required.");
             }
 
-            window.open("./prize.mp4", "_blank");
+            window.open("prize.mp4", "_blank");
         }
     </script>
 </body>
